@@ -1,0 +1,144 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Fonts/PressStart2P-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Fonts/buttonUI-50.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Scripts/MainMenu.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 80
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 55
+font_data = ExtResource( 1 )
+
+[node name="Main" type="Node2D"]
+
+[node name="Global" type="Node2D" parent="."]
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Background"]
+margin_right = 576.0
+margin_bottom = 1024.0
+color = Color( 0.87451, 0.87451, 0.87451, 1 )
+
+[node name="Ui" type="Node2D" parent="."]
+
+[node name="Menus" type="Node2D" parent="Ui"]
+
+[node name="MainMenu" type="Node2D" parent="Ui/Menus"]
+script = ExtResource( 3 )
+
+[node name="Tittle" type="Node2D" parent="Ui/Menus/MainMenu"]
+
+[node name="Title" type="Label" parent="Ui/Menus/MainMenu/Tittle"]
+margin_top = 150.0
+margin_right = 576.0
+margin_bottom = 230.0
+custom_colors/font_color = Color( 0.396078, 0.396078, 0.396078, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Título"
+align = 1
+valign = 1
+
+[node name="Align" type="VBoxContainer" parent="Ui/Menus/MainMenu"]
+margin_top = 398.0
+margin_right = 576.0
+margin_bottom = 626.0
+custom_constants/separation = 30
+
+[node name="Start" type="Button" parent="Ui/Menus/MainMenu/Align"]
+margin_right = 576.0
+margin_bottom = 56.0
+focus_mode = 0
+custom_colors/font_color = Color( 0.396078, 0.396078, 0.396078, 1 )
+custom_fonts/font = ExtResource( 2 )
+enabled_focus_mode = 0
+text = "Start"
+flat = true
+
+[node name="Start2" type="Button" parent="Ui/Menus/MainMenu/Align"]
+margin_top = 86.0
+margin_right = 576.0
+margin_bottom = 142.0
+focus_mode = 0
+custom_colors/font_color = Color( 0.396078, 0.396078, 0.396078, 1 )
+custom_fonts/font = ExtResource( 2 )
+enabled_focus_mode = 0
+text = "Options"
+flat = true
+
+[node name="Start3" type="Button" parent="Ui/Menus/MainMenu/Align"]
+margin_top = 172.0
+margin_right = 576.0
+margin_bottom = 228.0
+focus_mode = 0
+custom_colors/font_color = Color( 0.396078, 0.396078, 0.396078, 1 )
+custom_fonts/font = ExtResource( 2 )
+enabled_focus_mode = 0
+text = "Exit"
+flat = true
+
+[node name="Tween" type="Tween" parent="Ui/Menus/MainMenu"]
+
+[node name="DifficultyMenu" type="Node2D" parent="Ui/Menus"]
+position = Vector2( 576, 0 )
+
+[node name="Tittle" type="Node2D" parent="Ui/Menus/DifficultyMenu"]
+
+[node name="Difficulty" type="Label" parent="Ui/Menus/DifficultyMenu/Tittle"]
+margin_top = 150.0
+margin_right = 576.0
+margin_bottom = 230.0
+custom_colors/font_color = Color( 0.396078, 0.396078, 0.396078, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Difficulty"
+align = 1
+valign = 1
+
+[node name="Align" type="VBoxContainer" parent="Ui/Menus/DifficultyMenu"]
+margin_top = 398.0
+margin_right = 576.0
+margin_bottom = 626.0
+custom_constants/separation = 30
+
+[node name="Easy" type="Button" parent="Ui/Menus/DifficultyMenu/Align"]
+margin_right = 576.0
+margin_bottom = 56.0
+focus_mode = 0
+custom_colors/font_color = Color( 0.396078, 0.396078, 0.396078, 1 )
+custom_fonts/font = ExtResource( 2 )
+enabled_focus_mode = 0
+text = "Easy"
+flat = true
+
+[node name="Medium" type="Button" parent="Ui/Menus/DifficultyMenu/Align"]
+margin_top = 86.0
+margin_right = 576.0
+margin_bottom = 142.0
+focus_mode = 0
+custom_colors/font_color = Color( 0.396078, 0.396078, 0.396078, 1 )
+custom_fonts/font = ExtResource( 2 )
+enabled_focus_mode = 0
+text = "Medium"
+flat = true
+
+[node name="Hard" type="Button" parent="Ui/Menus/DifficultyMenu/Align"]
+margin_top = 172.0
+margin_right = 576.0
+margin_bottom = 228.0
+focus_mode = 0
+custom_colors/font_color = Color( 0.396078, 0.396078, 0.396078, 1 )
+custom_fonts/font = ExtResource( 2 )
+enabled_focus_mode = 0
+text = "Hard"
+flat = true
+
+[node name="Tween" type="Tween" parent="Ui/Menus/DifficultyMenu"]
+
+[node name="Score" type="Node2D" parent="."]
+
+[node name="Buttons" type="Node2D" parent="."]
+
+[node name="Emmitters" type="Node2D" parent="."]
