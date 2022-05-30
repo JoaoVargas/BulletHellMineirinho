@@ -11,14 +11,15 @@ func _ready() -> void:
 	pass # Replace with function body.
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta: float) -> void:
-#	pass
+#func StartPressed() -> void:
+#	get_node("OptionsMenu").move(Vector2(-1152, 0))
+#	get_node("MainMenu").move(Vector2(-576, 0))
+#	get_node("DifficultyMenu").move(Vector2(0, 0))
 
 
-func _on_Start_pressed() -> void:
-	pass # Replace with function body.
 
+func _on_Settings_pressed() -> void:
+	get_node("SettingsMenu").move(Vector2(0, 0))
 
-func StartPressed() -> void:
-	pass # Replace with function body.
+func _on_ExitSettings_pressed() -> void:
+	get_node("SettingsMenu").move(Vector2(-576, 0))
